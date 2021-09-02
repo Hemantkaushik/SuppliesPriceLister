@@ -23,4 +23,22 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuppliesPriceLister.DataManager\SuppliesPriceLister.DataManager.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.FileParserRepository\SuppliesPriceLister.FileParserRepository.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.Model\SuppliesPriceLister.Model.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.Service\SuppliesPriceLister.Service.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.Utility\SuppliesPriceLister.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
