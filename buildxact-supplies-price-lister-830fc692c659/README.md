@@ -38,3 +38,7 @@ Both humphries.csv and megacorp.json contain lists of construction supplies and 
 * Be prepared to talk us through your thinking process & assumptions as you go.
 * Feel free to use any resources you would normally use (Google, StackOverflow etc.)
 * Please ask any questions you wish
+
+Time Recoring 
+6 min in Morning 9:03 to 9:09
+30 Min in evening 5:06 to 5:36
