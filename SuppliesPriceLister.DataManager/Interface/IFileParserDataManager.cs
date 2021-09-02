@@ -6,6 +6,6 @@ namespace SuppliesPriceLister.DataManager.Interface
 {
     public interface IFileParserDataManager
     {
-        Task<IList<HumphriesModel>> GetParsedFile(string filePath);
+        Task<IList<HumphriesModel>> GetParsedHumphriesFile(string filePath);
     }
 }

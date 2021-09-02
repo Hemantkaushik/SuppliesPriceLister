@@ -17,7 +17,7 @@ namespace SuppliesPriceLister.DataManager
             _fileParserHumphries = fileParserHumphries;
             _mapper = mapper;
         }
-        public async Task<IList<HumphriesModel>> GetParsedFile(string filePath)
+        public async Task<IList<HumphriesModel>> GetParsedHumphriesFile(string filePath)
         {
             var humphriesFileData = await _fileParserHumphries.ParseFile(filePath);
             return _mapper.Map<List<HumphriesModel>>(humphriesFileData);
