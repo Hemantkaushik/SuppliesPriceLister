@@ -1,6 +1,6 @@
 ﻿using SuppliesPriceLister.FileParserRepository.Interface;
-using SuppliesPriceLister.Model;
-using System;
+using SuppliesPriceLister.FileParserRepository.Model;
+using SuppliesPriceLister.Utility;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,9 +8,10 @@ namespace SuppliesPriceLister.FileParserRepository
 {
     public class FileParserHumphries : IFileParserHumphries
     {
-        public Task<IList<HumphriesModel>> ParseFile(string filePath)
+        public async  Task<IList<HumphriesModel>> ParseFile(string filePath)
         {
-            throw new NotImplementedException();
+            var csvData = await Task.Run(() => CsvReadHelper.GetCsvContents<HumphriesModel>(filePath));
+            return csvData;
         }
     }
 }

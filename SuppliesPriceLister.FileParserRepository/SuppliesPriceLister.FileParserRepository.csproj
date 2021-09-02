@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SuppliesPriceLister.Model\SuppliesPriceLister.Model.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.Utility\SuppliesPriceLister.Utility.csproj" />
   </ItemGroup>
 
 </Project>

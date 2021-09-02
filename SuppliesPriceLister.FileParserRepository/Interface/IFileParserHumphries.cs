@@ -1,7 +1,5 @@
-﻿using SuppliesPriceLister.Model;
-using System;
+﻿using SuppliesPriceLister.FileParserRepository.Model;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SuppliesPriceLister.FileParserRepository.Interface

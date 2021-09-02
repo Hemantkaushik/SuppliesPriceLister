@@ -4,4 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuppliesPriceLister.FileParserRepository\SuppliesPriceLister.FileParserRepository.csproj" />
+    <ProjectReference Include="..\SuppliesPriceLister.Model\SuppliesPriceLister.Model.csproj" />
+  </ItemGroup>
+
 </Project>
