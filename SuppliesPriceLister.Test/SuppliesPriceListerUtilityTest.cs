@@ -60,6 +60,41 @@ namespace SuppliesPriceLister.Test
             Assert.IsNotNull(jsonData);
         }
 
+        #endregion 
+
+        #region CsvReadHelper
+
+        [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException), "")]
+        public void should_return_file_not_found_exception()
+        {
+            //Arrange
+            var filePath = Directory.GetCurrentDirectory() + "\\UserData1.csv";
+            //Act
+            var csvData = CsvReadHelper.GetCsvContents<UserData>(filePath);
+            //Assert
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CsvHelper.HeaderValidationException), "")]
+        public void should_return_exception()
+        {
+            //Arrange
+            var filePath = Directory.GetCurrentDirectory() + "\\UserDataWithoutHeaderOrWrongHeader.csv";
+            //Act
+            var csvData = CsvReadHelper.GetCsvContents<UserData>(filePath);
+            //Assert
+        }
+        [TestMethod]
+        public void should_return_data_from_csv_file()
+        {
+            //Arrange
+            var filePath = Directory.GetCurrentDirectory() + "\\UserData.csv";
+            //Act
+            var csvData = CsvReadHelper.GetCsvContents<UserData>(filePath);
+            //Assert
+            Assert.IsNotNull(csvData);
+        }
         #endregion
     }
     public class UserData
