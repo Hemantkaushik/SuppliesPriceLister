@@ -1,12 +1,20 @@
-﻿using System;
+﻿using buildxact_supplies;
+using buildxact_supplies.Extension.buildxact_supplies.Extension;
+using Microsoft.Extensions.Hosting;
+using System;
+using System.Threading.Tasks;
 
 namespace SuppliesPriceLister
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            // Your solution begins here
+            var host = CreateHostBuilder(args).Build();
+            await host.RunAsync();
         }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+           Host.CreateDefaultBuilder(args)
+           .UseStartup<Startup>();
     }
 }
