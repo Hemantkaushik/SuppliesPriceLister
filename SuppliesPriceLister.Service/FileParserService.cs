@@ -21,6 +21,7 @@ namespace SuppliesPriceLister.Service
         {
             _fileParserDataManager = fileParserDataManager;
             _iMapper = iMapper;
+            _options = options.Value;
         }
         public async  Task ProcessParsedFiles(string csvFilePath,string jsonFilePath)
         {
