@@ -28,7 +28,7 @@ namespace buildxact_supplies.Service
             try
             {
                 var dir = Directory.GetCurrentDirectory();
-                var csvData = await _fileParserService.ProcessParsedFiles(dir + "\\humphries.csv");
+                await _fileParserService.ProcessParsedFiles(dir + "\\humphries.csv", dir + "\\megacorp.json");
             }
             catch (Exception ex)
             {

@@ -7,5 +7,6 @@ namespace SuppliesPriceLister.DataManager.Interface
     public interface IFileParserDataManager
     {
         Task<IList<HumphriesModel>> GetParsedHumphriesFile(string filePath);
+        Task<IList<Partner>> GetParsedMegaCorpFile(string filePath);
     }
 }

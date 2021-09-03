@@ -28,6 +28,7 @@ namespace buildxact_supplies
             services.AddScoped<IFileParserService, FileParserService>();
             services.AddScoped<IFileParserDataManager, FileParserDataManager>();
             services.AddScoped<IFileParserHumphries, FileParserHumphries>();
+            services.AddScoped<IFileParserMegaCorp, FileParserMegaCorp>();
             services.AddHostedService<ProcessFileService>();
         }
     }
